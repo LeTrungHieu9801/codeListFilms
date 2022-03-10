@@ -1,0 +1,296 @@
+*{
+    padding: 0px 0px;
+    margin: 0px 0px;
+    box-sizing: border-box;
+}
+
+/* COMMOM */
+.a-items
+{
+    align-items: center;
+}
+.j-center
+{
+    justify-content: center;
+}
+.d-flex
+{
+    display: flex;
+}
+.box
+{
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+.boxtop
+{
+    display: flex;
+   position: relative;
+    width: 100%;
+    min-height: 60vh;
+    background: url('1112.jpg') top center / cover no-repeat ;
+   
+}
+
+.signin
+{
+    display: flex;
+    background-color: #000000d1;
+    width: 30%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+.title
+{
+    color: white;
+    font-size: 30px;
+    margin-top: 15%;
+    font-weight: none;
+}
+.a1
+{
+    width: 100%;
+    text-decoration: none;
+}
+.signin .a1 .watch
+{
+    width: 50%;
+    height: 45px;
+    background-color: rgb(161, 29, 29);
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 5%;           
+}
+.signin .a1 .signin1
+{
+    width: 50%;
+    height: 45px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-top: 2%; 
+}
+.icon
+{
+ position: absolute;
+ left: -35px;
+ top: 80%;
+ transform: rotate(90deg);
+ 
+}
+.icon .icon1
+{
+   font-size: 20px;
+    color: rgb(12, 12, 12);
+    color: white;
+    margin: 0px 10px;
+}
+.icon .ti-facebook:hover
+{
+background-color: blue;
+color: white;
+}
+.icon .ti-instagram:hover
+{
+
+color: rgb(245, 13, 195);
+}
+.icon .ti-youtube:hover
+{
+
+color: rgb(250, 250, 250);
+background-color: red;
+}
+
+.circle
+{
+    position: absolute;
+    right: 32%;
+   bottom: 2%;
+   
+}
+.circle .circle1
+{
+    width: 20px;
+    height: 20px;
+    background-color: #f8f5f598;
+    border-radius: 50%; 
+    margin: 0px 5px;
+}
+.circle .circle1.active
+{
+    
+    background-color: #50df1898;
+
+}
+.circle .circle1:hover
+{
+    background-color: aliceblue;
+}
+/* phần dưới */
+.boxbottom
+{
+    min-height: 40vh;
+    width: 100%;
+    flex: 2;
+    
+}
+.boxbottom .left
+{
+    width: 25%;
+    min-height: 100%;
+    background-color: rgb(59, 59, 59);
+}
+.boxbottom .left .so02
+{
+    color: rgb(151, 146, 146);
+    font-size: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boxbottom .right
+{
+    width: 75%;
+    min-height: 100%;
+    background-color: rgb(59, 59, 59);  
+    border-left: solid rgb(75, 71, 71) 2px;
+}
+
+.boxbottom .right .title1
+{
+    color: white;
+    font-size: 40px;
+    font-weight: none;
+    margin: 0px 5%;
+    margin-top: 2%;
+}
+.boxbottom .right .gachngang
+{
+    width: 30px;
+    height: 2px;
+    background-color: white ;
+    margin-left: 10px;
+    margin-top: 14px;
+    margin-left: 5%;
+    
+}
+.text
+{
+    color: rgb(151, 146, 146) ;
+    font-size: 20px;
+    padding: 4px;
+    
+}
+
+
+/* media query */
+
+
+@media (max-width: 576px) { 
+    .boxbottom
+    {
+        height: 100vh;
+        width: 100%;
+       
+    }
+    .boxbottom .right
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .right #des
+    {
+        font-size: 12px;
+    }
+    #name1
+    {
+        font-size: 15px;
+    }
+    .signin
+    {
+       min-height: 100%;
+        width: 100%;
+    }
+    .boxbottom .left
+    {
+      display: none;
+       
+    }
+
+ }
+
+@media (min-width: 576px) {  
+
+    .right #des
+    {
+        font-size: 12px;
+    }
+    #name1
+    {
+        font-size: 20px;
+    } 
+    .boxbottom .left
+    {
+      display: none;
+       
+    }
+    .boxbottom .right
+    {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 768px) 
+{ 
+    #stt
+    {
+        font-size: 80px;
+    }
+
+    .boxbottom .right
+    {
+        width: 100%;
+       
+    }
+    .right #des
+    {
+        font-size: 15px;
+    }
+    #name1
+    {
+        font-size: 20px;
+    }
+    .circle
+    {
+       right: calc(50% - 45px) ; 
+    }
+    .boxbottom .left
+    {
+      display: flex;
+       
+    }
+}
+
+
+@media (min-width: 992px) 
+{    #stt
+    {
+        font-size: 120px;
+    } 
+    .right #des
+    {
+        font-size: 20px;
+    }
+}
+
+

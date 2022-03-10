@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="buoi13.css">
+    <link rel="stylesheet" href="font/themify-icons/themify-icons.css">
+    <link rel="icon" href="/BUỔI 13/favicon.ico">
+    <script src="/thuvienJquery.js"></script>
+    <title>LTH-films</title>
+</head>
+
+<body>
+    <div class="box">
+        <!-- phần trên -->
+        <div class="boxtop">
+            <div class="signin">
+                <!-- title & button -->
+                <p class="title" id="name">
+                   
+                </p>
+                <a class=" a1 d-flex j-center " href=""><button class="watch ">Watch</button></a>
+                <a class="a1 d-flex j-center " href=""><button class="signin1 ">Sign in </button></a>
+
+                <!-- iconnn -->
+                <div class="icon">
+                    <a class="a1" href=""><i class="icon1 ti-facebook"></i></a>
+                    <a class="a1" href=""><i class="icon1 ti-instagram"></i></a>
+                    <a class="a1" href=""><i class="icon1 ti-youtube"></i></a>
+                </div>
+
+            </div>
+            <!-- chuyen slider  -->
+            <div id="circle" class="circle d-flex">
+                <div class="circle1" style="background-color: green;" id="spiderman">
+
+                </div>
+                <div class="circle1" id="batman">
+
+                </div>
+                <div class="circle1" id="ironman">
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- phần dưới -->
+        <div class="boxbottom d-flex">
+            <div class="left d-flex a-items j-center">
+                <p class="so02" id="stt">
+                    
+                </p>
+            </div>
+
+            <div class="right">
+                <p class="title1" id="name1">
+                    
+                </p>
+
+                <div class="d-flex">
+                    <div class="gachngang">
+
+                    </div>
+                    <p class="text" id="date1" style="margin-left: 1%">16/11/2022</p>
+                </div>
+                <p class="text" id="des" style="margin: 0px 5%;">
+                  
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- phần javascript -->
+    <script>
+
+        let filmsContent = {
+            active: 0,
+            arrayFilm: [
+                {
+                    stt: '01.', //stt
+                    date: "16/11/2022", //date
+                    des: ` Ngày 16/11, Sony Pictures đã tung trailer chính thức thứ hai cho "\
+                 Spider-Man: No Way Home”. Đoạn giới thiệu có sự hiện diện của dàn phản diện đông đảo."\
+                 Spider-Man: No Way Home là phần phim riêng thứ ba về nhân vật Spider-Man của Tom Holland. Tác phẩm"\
+                 phát hành tại Bắc Mỹ từ 17/12, là phim siêu anh hùng cuối cùng ra mắt trong năm 2021."\
+                 Ngày 16/11, Sony Pictures đã tung trailer chính thức thứ hai cho “Spider-Man: No Way Home”. Đoạn"\
+                 giới thiệu có sự hiện diện của dàn phản diện đông đảo."\
+                 Spider-Man: No Way Home là phần phim riêng thứ ba về nhân vật Sder-Man của Tom Holland. Tác phẩm"\
+                 phát hành tại Bắc Mỹ từ 17/12, là phim siêu anh hùng cuối cùng ra mắt trong năm 2021.`, //des
+
+                    name: "SPIDER MAN 02", //name
+                    bg1: "1112.jpg", // background
+                },
+
+                {
+                    stt: '02.', //stt
+                    date: "22/03/2022", //date
+                    des: ` Ngày 16/11, Sony Pictures đã tung trailer chính thức thứ hai cho "\
+                 Spider-Man: No Way Home”. Đoạn giới thiệu có sự hiện diện của dàn phản diện đông đảo."\
+                 Spider-Man: No Way Home là phần phim riêng thứ ba về nhân vật Spider-Man của Tom Holland. Tác phẩm"\
+                 phát hành tại Bắc Mỹ từ 17/12, là phim siêu anh hùng cuối cùng ra mắt trong năm 2021."\
+                 Ngày 16/11, Sony Pictures đã tung trailer chính thức thứ hai cho “Spider-Man: No Way Home”. Đoạn"\
+                 giới thiệu có sự hiện diện của dàn phản diện đông đảo."\
+                 Spider-Man: No Way Home là phần phim riêng thứ ba về nhân vật Sder-Man của Tom Holland. Tác phẩm"\
+                 phát hành tại Bắc Mỹ từ 17/12, là phim siêu anh hùng cuối cùng ra mắt trong năm 2021.`, //des
+
+                    name: "BATMAN 02", //name
+                    bg1: "batman.jpg", // background
+                },
+
+                {
+                    stt: '03.', //stt
+                    date: "19/04/2022", //date
+                    des: ` Ngày 16/11, Sony Pictures đã tung trailer chính thức thứ hai cho "\
+                 Spider-Man: No Way Home”. Đoạn giới thiệu có sự hiện diện của dàn phản diện đông đảo."\
+                 Spider-Man: No Way Home là phần phim riêng thứ ba về nhân vật Spider-Man của Tom Holland. Tác phẩm"\
+                 phát hành tại Bắc Mỹ từ 17/12, là phim siêu anh hùng cuối cùng ra mắt trong năm 2021."\
+                 Ngày 16/11, Sony Pictures đã tung trailer chính thức thứ hai cho “Spider-Man: No Way Home”. Đoạn"\
+                 giới thiệu có sự hiện diện của dàn phản diện đông đảo."\
+                 Spider-Man: No Way Home là phần phim riêng thứ ba về nhân vật Sder-Man của Tom Holland. Tác phẩm"\
+                 phát hành tại Bắc Mỹ từ 17/12, là phim siêu anh hùng cuối cùng ra mắt trong năm 2021.`, //des
+
+                    name: "IRON MAN II", //name
+                    bg1: "https://i.pinimg.com/originals/9b/d8/42/9bd842119c1859511a4c20a3e67952e2.jpg", // background
+                },
+
+            ]
+
+        }
+
+        function renderSlide() {
+            document.getElementById("circle").innerHTML = "";
+            //$("#list-slide").html("");
+            for (var i = 0; i < filmsContent.arrayFilm.length; i++) {
+                var x = `<div onclick="triggerFilmSelected(${i})" class="circle1 ${(i == filmsContent.active ? "active" : "")}"> </div>`;
+                document.getElementById("circle").innerHTML += x;
+                //$("#list-slide").html($("#list-slide").html() + x);
+            }
+        }
+
+        function triggerFilmSelected(filmIndex) {
+            filmsContent.active = filmIndex;
+            let film = filmsContent.arrayFilm[filmIndex];
+            renderSlide();
+            document.getElementById("stt").innerText = film.stt;
+            //$('#number-film').text(film.number);
+
+            document.getElementById("name").innerText = film.name;
+            //$('#big-title').text(film.title);
+
+            document.getElementById("name1").innerText = `${film.stt} ${film.name}`;
+            //$('#title-film').text(film.title);
+
+            document.getElementById("date1").innerText = film.date;
+            //$('#date-film').text(film.date);
+
+            document.getElementById("des").innerText = film.des;
+            //$('#content-film-des').text(film.content);
+
+            // document.getElementById("boxtop").style = `background: url('${film.bg1}')`;
+            $(".boxtop").css("background-image", "url('" + film.bg1 + "')")
+
+            //NOTE: MULTIPLE CSS
+            //$("#content-picture").css({ 'background-image': 'url("${film.img}")', 'color':'red' });
+        }
+        renderSlide();
+        triggerFilmSelected(filmsContent.active);
+
+      
+
+        // chạy slide 
+        setTimeout(function () {
+            triggerFilmSelected(0);
+        }, 0)
+        setTimeout(function () {
+            triggerFilmSelected(1);
+        }, 5000)
+        setTimeout(function () {
+            triggerFilmSelected(2);
+        }, 10000)
+        
+
+        setInterval(function () {
+            setTimeout(function () {
+                triggerFilmSelected(0);
+            }, 0)
+            setTimeout(function () {
+                triggerFilmSelected(1);
+            }, 5000)
+            setTimeout(function () {
+                triggerFilmSelected(2);
+            }, 10000)
+        }, 15000)
+
+
+
+
+    </script>
+</body>
+
+</html>
